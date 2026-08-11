@@ -3,7 +3,7 @@ spring:
     name: event-api
 
   datasource:
-    url: jdbc:postgresql://localhost:5432/eventdb
+    url: jdbc:postgresql://localhost:5532/eventdb
     username: postgres
     password: postgres
 
