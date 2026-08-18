@@ -53,11 +53,12 @@ public class TIcketType {
     public boolean equals(Object o) {
         if (o == null || getClass() != o.getClass()) return false;
         TIcketType that = (TIcketType) o;
-        return Objects.equals(id, that.id) && Objects.equals(name, that.name) && Objects.equals(price, that.price) && Objects.equals(totalAvailable, that.totalAvailable) && Objects.equals(event, that.event) && Objects.equals(createdAt, that.createdAt) && Objects.equals(updatedAt, that.updatedAt);
+        return Objects.equals(id, that.id) && Objects.equals(name, that.name) && Objects.equals(price, that.price) && Objects.equals(totalAvailable, that.totalAvailable) && Objects.equals(event, that.event) && Objects.equals(tickets, that.tickets) && Objects.equals(createdAt, that.createdAt) && Objects.equals(updatedAt, that.updatedAt);
     }
 
     @Override
     public int hashCode() {
-        return Objects.hash(id, name, price, totalAvailable, event, createdAt, updatedAt);
+        return Objects.hash(id, name, price, totalAvailable, event, tickets, createdAt, updatedAt);
     }
+
 }
