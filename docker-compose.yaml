@@ -7,9 +7,8 @@ services:
       POSTGRES_PASSWORD: postgres
       POSTGRES_DB: eventdb
     ports:
-      - "5532:5432"
-    volumes:
-      - db_data:/var/lib/postgresql/data
+      - "5433:5432"
+
 
   adminer:
     image: adminer:latest
@@ -19,19 +18,12 @@ services:
 
   keycloak:
     image: quay.io/keycloak/keycloak:latest
+    restart: always
+    ports:
+      - "9090:8080"
     environment:
       KEYCLOAK_ADMIN: admin
       KEYCLOAK_ADMIN_PASSWORD: admin
-    volumes:
-      - keycloak_data:/opt/keycloak/data
+
     command:
       - start-dev
-      - --db=dev-file
-    ports:
-      - "9090:8080"
-
-volumes:
-  keycloak_data:
-    driver: local
-  db_data:
-    driver: local

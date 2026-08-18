@@ -3,7 +3,7 @@ spring:
     name: event-api
 
   datasource:
-    url: jdbc:postgresql://localhost:5532/eventdb
+    url: jdbc:postgresql://localhost:5433/eventdb
     username: postgres
     password: postgres
 
@@ -16,3 +16,10 @@ spring:
         format_sql: true
         dialect: org.hibernate.dialect.PostgreSQLDialect
 
+
+
+  security:
+    oauth2:
+      resourceserver:
+        jwt:
+          issuer-uri: http://localhost:9090/realms/event-ticket-platform
