@@ -21,6 +21,6 @@ public class EventRequest {
     private LocalDateTime saleStart;
     private LocalDateTime saleEnd;
     private EventStatus status;
-    private List<CreateTicketTypeRequest> ticketTypes = new ArrayList<>();
+    private List<CreateTicketTypeRequest> ticketTypes;
 
 }

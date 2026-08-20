@@ -9,7 +9,7 @@ import com.zanguetsuinc.event_api.domain.models.Event;
 import org.mapstruct.Mapper;
 import org.mapstruct.ReportingPolicy;
 
-@Mapper(componentModel = "spring", unmappedTargetPolicy = ReportingPolicy.IGNORE)
+@Mapper(componentModel = "spring")
 public interface EventMapper {
 
     CreateTicketTypeRequest fromRequest(TicketTypeRequest request);
