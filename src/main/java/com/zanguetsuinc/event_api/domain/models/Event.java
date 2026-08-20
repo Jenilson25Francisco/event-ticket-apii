@@ -72,11 +72,11 @@ public class Event {
     public boolean equals(Object o) {
         if (o == null || getClass() != o.getClass()) return false;
         Event event = (Event) o;
-        return Objects.equals(id, event.id) && Objects.equals(name, event.name) && Objects.equals(startDate, event.startDate) && Objects.equals(endDate, event.endDate) && Objects.equals(venue, event.venue) && Objects.equals(salesStart, event.salesStart) && Objects.equals(salesEnd, event.salesEnd) && status == event.status && Objects.equals(organizer, event.organizer) && Objects.equals(attendees, event.attendees) && Objects.equals(staff, event.staff) && Objects.equals(tIcketTypes, event.tIcketTypes) && Objects.equals(createdAt, event.createdAt) && Objects.equals(updatedAt, event.updatedAt);
+        return Objects.equals(id, event.id) && Objects.equals(name, event.name) && Objects.equals(startDate, event.startDate) && Objects.equals(endDate, event.endDate) && Objects.equals(venue, event.venue) && Objects.equals(salesStart, event.salesStart) && Objects.equals(salesEnd, event.salesEnd) && status == event.status && Objects.equals(createdAt, event.createdAt) && Objects.equals(updatedAt, event.updatedAt);
     }
 
     @Override
     public int hashCode() {
-        return Objects.hash(id, name, startDate, endDate, venue, salesStart, salesEnd, status, organizer, attendees, staff, tIcketTypes, createdAt, updatedAt);
+        return Objects.hash(id, name, startDate, endDate, venue, salesStart, salesEnd, status, createdAt, updatedAt);
     }
 }
